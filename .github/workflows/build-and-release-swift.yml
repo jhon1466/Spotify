@@ -106,7 +106,7 @@ jobs:
 
     - name: Download Decrypted Spotify Package
       run: |
-        response=$(curl -ks 'https://decrypt.whoGalapagame.com/decrypted?appId=324684580&apiKey=${{ secrets.GalapagameDECRYPTER_API_KEY }}')
+        response=$(curl -ks 'https://decrypt.whoeevee.com/decrypted?appId=324684580&apiKey=${{ secrets.GalapagameDECRYPTER_API_KEY }}')
         link=$(echo "$response" | jq -r '.link')
         wget --no-check-certificate -q $link
         echo "SPOTIFY_VERSION=${${(s/-/)link}[2]%.ipa}" >> $GITHUB_ENV
