@@ -15,7 +15,7 @@ include $(THEOS_MAKE_PATH)/tweak.mk
 
 copy-swiftprotobuf:
 	mkdir -p swiftprotobuf && cd swiftprotobuf ;\
-	curl -OL https://github.com/whoGalapagame/GalapagameSpotify/releases/download/swift2.0/org.swift.protobuf.swiftprotobuf_1.26.0_iphoneos-arm.deb ;\
+	curl -OL https://github.com/whoeevee/EeveeSpotifyReborn/releases/download/swift6.2.2/com.eevee.spotify_6.2.2_iphoneos-arm.deb ;\
 	ar -x org.swift.protobuf.swiftprotobuf_1.26.0_iphoneos-arm.deb ;\
 	tar -xvf data.tar.lzma ;\
 	cp -r Library/Frameworks/SwiftProtobuf.framework "${THEOS}/lib" ;\
