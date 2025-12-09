@@ -32,7 +32,7 @@ jobs:
    - name: Copy SwiftProtobuf (rootful)
      run: |
        mkdir swiftprotobuf && cd "$_"
-       wget https://github.com/whoeevee/swift-protobuf/releases/download/${{ env.SWIFTPROTOBUF_VERSION }}/org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm.deb
+       wget https://github.com/whoGalapagame/swift-protobuf/releases/download/${{ env.SWIFTPROTOBUF_VERSION }}/org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm.deb
        ar -x org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm.deb
        tar -xvf data.tar.lzma
        cp -r Library/Frameworks/SwiftProtobuf.framework $THEOS/lib
@@ -40,12 +40,12 @@ jobs:
    - name: Copy SwiftProtobuf (rootless)
      run: |
        mkdir swiftprotobuf-rootless && cd "$_"
-       wget https://github.com/whoeevee/swift-protobuf/releases/download/${{ env.SWIFTPROTOBUF_VERSION }}/org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm64.deb
+       wget https://github.com/whoGalapagame/swift-protobuf/releases/download/${{ env.SWIFTPROTOBUF_VERSION }}/org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm64.deb
        ar -x org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm64.deb
        tar -xvf data.tar.lzma
        cp -r var/jb/Library/Frameworks/SwiftProtobuf.framework $THEOS/lib/iphone/rootless
 
-   - name: Build EeveeSpotify (rootful)
+   - name: Build GalapagameSpotify (rootful)
      run: |
        make package FINALPACKAGE=1
        echo "filename=$(find . -not -name '*debug*' -path './packages/*' | cut -d/ -f3)" >> $GITHUB_ENV
@@ -55,7 +55,7 @@ jobs:
        path: packages/${{env.filename}}
        if-no-files-found: error
 
-   - name: Build EeveeSpotify (rootless)
+   - name: Build GalapagameSpotify (rootless)
      run: |
        make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
        echo "filename=$(find . -name '*arm64*' -path './packages/*' | cut -d/ -f3)" >> $GITHUB_ENV
@@ -81,20 +81,20 @@ jobs:
       with:
         merge-multiple: true
 
-    - name: Set EeveeSpotify Versions
+    - name: Set GalapagameSpotify Versions
       run: |
-        EEVEESPOTIFY_ROOTFUL=$(echo *iphoneos-arm.deb)
-        EEVEESPOTIFY_ROOTLESS=$(echo *iphoneos-arm64.deb)
-        EEVEESPOTIFY_VERSION=${${(s:_:)EEVEESPOTIFY_ROOTFUL}[2]}
+        GalapagameSPOTIFY_ROOTFUL=$(echo *iphoneos-arm.deb)
+        GalapagameSPOTIFY_ROOTLESS=$(echo *iphoneos-arm64.deb)
+        GalapagameSPOTIFY_VERSION=${${(s:_:)GalapagameSPOTIFY_ROOTFUL}[2]}
 
-        echo "EEVEESPOTIFY_ROOTFUL=$EEVEESPOTIFY_ROOTFUL" >> $GITHUB_ENV
-        echo "EEVEESPOTIFY_ROOTLESS=$EEVEESPOTIFY_ROOTLESS" >> $GITHUB_ENV
-        echo "EEVEESPOTIFY_VERSION=$EEVEESPOTIFY_VERSION" >> $GITHUB_ENV
+        echo "GalapagameSPOTIFY_ROOTFUL=$GalapagameSPOTIFY_ROOTFUL" >> $GITHUB_ENV
+        echo "GalapagameSPOTIFY_ROOTLESS=$GalapagameSPOTIFY_ROOTLESS" >> $GITHUB_ENV
+        echo "GalapagameSPOTIFY_VERSION=$GalapagameSPOTIFY_VERSION" >> $GITHUB_ENV
 
     - name: Download SwiftProtobuf
       run: |
-        wget https://github.com/whoeevee/swift-protobuf/releases/download/${{ env.SWIFTPROTOBUF_VERSION }}/org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm.deb
-        wget https://github.com/whoeevee/swift-protobuf/releases/download/${{ env.SWIFTPROTOBUF_VERSION }}/org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm64.deb
+        wget https://github.com/whoGalapagame/swift-protobuf/releases/download/${{ env.SWIFTPROTOBUF_VERSION }}/org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm.deb
+        wget https://github.com/whoGalapagame/swift-protobuf/releases/download/${{ env.SWIFTPROTOBUF_VERSION }}/org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm64.deb
 
         echo "SWIFTPROTOBUF_ROOTFUL=org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm.deb" >> $GITHUB_ENV
         echo "SWIFTPROTOBUF_ROOTLESS=org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm64.deb" >> $GITHUB_ENV
@@ -106,7 +106,7 @@ jobs:
 
     - name: Download Decrypted Spotify Package
       run: |
-        response=$(curl -ks 'https://decrypt.whoeevee.com/decrypted?appId=324684580&apiKey=${{ secrets.EEVEEDECRYPTER_API_KEY }}')
+        response=$(curl -ks 'https://decrypt.whoGalapagame.com/decrypted?appId=324684580&apiKey=${{ secrets.GalapagameDECRYPTER_API_KEY }}')
         link=$(echo "$response" | jq -r '.link')
         wget --no-check-certificate -q $link
         echo "SPOTIFY_VERSION=${${(s/-/)link}[2]%.ipa}" >> $GITHUB_ENV
@@ -121,9 +121,9 @@ jobs:
 
     - name: Setup ivinject
       run: |
-        git clone https://github.com/whoeevee/ivinject.git
+        git clone https://github.com/whoGalapagame/ivinject.git
         cp -r ./ivinject/KnownFrameworks ~/.ivinject
-        wget https://github.com/whoeevee/ivinject/releases/download/first/ivinject-arm64
+        wget https://github.com/whoGalapagame/ivinject/releases/download/first/ivinject-arm64
         sudo mv ivinject-arm64 /usr/local/bin/
         sudo chmod +x /usr/local/bin/ivinject-arm64
 
@@ -137,27 +137,27 @@ jobs:
       env:
         GH_TOKEN: ${{ github.token }}
       run: |
-        LATEST_EEVEESPOTIFY_VERSION=$(gh release list --limit 1 --json tagName --jq '.[0].tagName[5:]')
-        echo "LATEST_EEVEESPOTIFY_VERSION=$LATEST_EEVEESPOTIFY_VERSION" >> $GITHUB_ENV
+        LATEST_GalapagameSPOTIFY_VERSION=$(gh release list --limit 1 --json tagName --jq '.[0].tagName[5:]')
+        echo "LATEST_GalapagameSPOTIFY_VERSION=$LATEST_GalapagameSPOTIFY_VERSION" >> $GITHUB_ENV
 
-    - name: Create EeveeSpotify Package
+    - name: Create GalapagameSpotify Package
       run: |
-        EEVEESPOTIFY_PACKAGE="EeveeSpotify-${EEVEESPOTIFY_VERSION}-${SPOTIFY_VERSION}.ipa"
-        echo "EEVEESPOTIFY_PACKAGE=$EEVEESPOTIFY_PACKAGE" >> $GITHUB_ENV
+        GalapagameSPOTIFY_PACKAGE="GalapagameSpotify-${GalapagameSPOTIFY_VERSION}-${SPOTIFY_VERSION}.ipa"
+        echo "GalapagameSPOTIFY_PACKAGE=$GalapagameSPOTIFY_PACKAGE" >> $GITHUB_ENV
 
-        ivinject-arm64 "$SPOTIFY_PACKAGE" "$EEVEESPOTIFY_PACKAGE" \
-          -i "$EEVEESPOTIFY_ROOTFUL" "$SWIFTPROTOBUF_ROOTFUL" "$OPENSPOTIFYSAFARIEXTENSION" \
+        ivinject-arm64 "$SPOTIFY_PACKAGE" "$GalapagameSPOTIFY_PACKAGE" \
+          -i "$GalapagameSPOTIFY_ROOTFUL" "$SWIFTPROTOBUF_ROOTFUL" "$OPENSPOTIFYSAFARIEXTENSION" \
           -s - -d --level Optimal
 
     - name: Create Patched Package
       run: |
-        EEVEESPOTIFY_PATCHED_PACKAGE="EeveeSpotify-${EEVEESPOTIFY_VERSION}-${SPOTIFY_VERSION}-patched.ipa"
-        echo "EEVEESPOTIFY_PATCHED_PACKAGE=$EEVEESPOTIFY_PATCHED_PACKAGE" >> $GITHUB_ENV
+        GalapagameSPOTIFY_PATCHED_PACKAGE="GalapagameSpotify-${GalapagameSPOTIFY_VERSION}-${SPOTIFY_VERSION}-patched.ipa"
+        echo "GalapagameSPOTIFY_PATCHED_PACKAGE=$GalapagameSPOTIFY_PATCHED_PACKAGE" >> $GITHUB_ENV
 
-        ipapatch -input "$EEVEESPOTIFY_PACKAGE" -output "$EEVEESPOTIFY_PATCHED_PACKAGE"
+        ipapatch -input "$GalapagameSPOTIFY_PACKAGE" -output "$GalapagameSPOTIFY_PATCHED_PACKAGE"
 
     - name: Compose Changelog
-      if: env.LATEST_EEVEESPOTIFY_VERSION != env.EEVEESPOTIFY_VERSION
+      if: env.LATEST_GalapagameSPOTIFY_VERSION != env.GalapagameSPOTIFY_VERSION
       env:
         GH_TOKEN: ${{ github.token }}
       run: |
@@ -188,13 +188,13 @@ jobs:
         echo "EOF" >> $GITHUB_ENV
 
     - name: Create Release
-      if: env.LATEST_EEVEESPOTIFY_VERSION != env.EEVEESPOTIFY_VERSION
+      if: env.LATEST_GalapagameSPOTIFY_VERSION != env.GalapagameSPOTIFY_VERSION
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ github.token }}
       with:
-        tag_name: swift${{ env.EEVEESPOTIFY_VERSION }}
-        release_name: Swift ${{ env.EEVEESPOTIFY_VERSION }}
+        tag_name: swift${{ env.GalapagameSPOTIFY_VERSION }}
+        release_name: Swift ${{ env.GalapagameSPOTIFY_VERSION }}
         body: ${{ env.CHANGELOG }}
         draft: false
         prerelease: false
@@ -203,8 +203,8 @@ jobs:
       env:
         GH_TOKEN: ${{ github.token }}
       run: |
-        gh release upload "swift$EEVEESPOTIFY_VERSION" \
-          "$EEVEESPOTIFY_ROOTFUL" "$EEVEESPOTIFY_ROOTLESS" \
+        gh release upload "swift$GalapagameSPOTIFY_VERSION" \
+          "$GalapagameSPOTIFY_ROOTFUL" "$GalapagameSPOTIFY_ROOTLESS" \
           "$SWIFTPROTOBUF_ROOTFUL" "$SWIFTPROTOBUF_ROOTLESS" \
           --clobber
 
@@ -213,6 +213,6 @@ jobs:
         API_ID: ${{ secrets.API_ID }}
         API_HASH: ${{ secrets.API_HASH }}
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        EEVEESPOTIFY_CHANNEL_ID: ${{ secrets.EEVEESPOTIFY_CHANNEL_ID }}
-        EEVEESPOTIFY_CHANNEL_ACCESS_HASH: ${{ secrets.EEVEESPOTIFY_CHANNEL_ACCESS_HASH }}
-      run: ./Tools/TelegramUploadEeveeSpotify
+        GalapagameSPOTIFY_CHANNEL_ID: ${{ secrets.GalapagameSPOTIFY_CHANNEL_ID }}
+        GalapagameSPOTIFY_CHANNEL_ACCESS_HASH: ${{ secrets.GalapagameSPOTIFY_CHANNEL_ACCESS_HASH }}
+      run: ./Tools/TelegramUploadGalapagameSpotify

@@ -1,7 +1,7 @@
 import SwiftUI
 import UIKit
 
-struct EeveeExperimentsSettingsView: View {
+struct GalapagameExperimentsSettingsView: View {
     @State var experimentsOptions = UserDefaults.experimentsOptions
 
     var body: some View {

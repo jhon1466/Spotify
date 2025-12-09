@@ -28,7 +28,7 @@ private func loadCustomLyricsForCurrentTrack() throws -> Lyrics {
     
     let searchQuery = LyricsSearchQuery(
         title: track.trackTitle(),
-        primaryArtist: EeveeSpotify.hookTarget == .lastAvailableiOS14
+        primaryArtist: GalapagameSpotify.hookTarget == .lastAvailableiOS14
             ? track.artistTitle()
             : track.artistName(),
         spotifyTrackId: track.trackIdentifier
@@ -142,7 +142,7 @@ func getLyricsDataForCurrentTrack(_ originalPath: String, originalLyrics: Lyrics
         lyrics.colors = originalLyrics.colors
     }
     else {
-        let extractedColor = switch EeveeSpotify.hookTarget {
+        let extractedColor = switch GalapagameSpotify.hookTarget {
         case .lastAvailableiOS14:
             track.extractedColorHex()
         default:

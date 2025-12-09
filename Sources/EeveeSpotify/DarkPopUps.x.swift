@@ -5,7 +5,7 @@ import SwiftUI
 struct DarkPopUps: HookGroup { }
 
 private var popUpContainerViewController: String {
-    switch EeveeSpotify.hookTarget {
+    switch GalapagameSpotify.hookTarget {
     case .lastAvailableiOS14: return "SPTEncorePopUpContainer"
     default: return "EncoreConsumerMobile_Wrappers.PopUpPresentableContainer"
     }

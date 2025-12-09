@@ -29,10 +29,10 @@ extension UserDefaults {
         }
     }
 
-    static var patchType: EeveePatchType {
+    static var patchType: GalapagamePatchType {
         get {
             if let rawValue = container.object(forKey: patchTypeKey) as? Int {
-                return EeveePatchType(rawValue: rawValue) ?? .requests
+                return GalapagamePatchType(rawValue: rawValue) ?? .requests
             }
 
             return .notSet

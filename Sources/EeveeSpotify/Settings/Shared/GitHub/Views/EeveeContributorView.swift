@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct EeveeContributorView: View {
-    var contributor: EeveeContributor
+struct GalapagameContributorView: View {
+    var contributor: GalapagameContributor
     var githubUser: GitHubUser
     
     var body: some View {

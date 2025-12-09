@@ -18,7 +18,7 @@ struct CommonIssuesTipView: View {
                     
                     Link(
                         destination: URL(
-                            string: "https://github.com/whoeevee/EeveeSpotifyReborn/blob/swift/common_issues.md"
+                            string: "https://github.com/whoGalapagame/GalapagameSpotifyReborn/blob/swift/common_issues.md"
                         )!,
                         label: {
                             VStack {
@@ -26,7 +26,7 @@ struct CommonIssuesTipView: View {
                                     .foregroundColor(.white)
                                 
                                 + Text("common_issues_tip_button".localized)
-                                    .foregroundColor(EeveeSettingsView.spotifyAccentColor)
+                                    .foregroundColor(GalapagameSettingsView.spotifyAccentColor)
                                 
                                 + Text(".")
                                     .foregroundColor(.white)

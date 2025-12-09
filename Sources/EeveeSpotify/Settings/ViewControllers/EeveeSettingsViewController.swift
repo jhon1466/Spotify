@@ -1,7 +1,7 @@
 import SwiftUI
 import UIKit 
 
-class EeveeSettingsViewController: SPTPageViewController {
+class GalapagameSettingsViewController: SPTPageViewController {
     let frame: CGRect
     let settingsView: AnyView
     
@@ -29,6 +29,6 @@ class EeveeSettingsViewController: SPTPageViewController {
     }
     
     @objc func openRepositoryUrl(_ sender: UIButton) {
-        UIApplication.shared.open(URL(string: "https://github.com/whoeevee/EeveeSpotifyReborn")!)
+        UIApplication.shared.open(URL(string: "https://github.com/whoGalapagame/GalapagameSpotifyReborn")!)
     }
 }

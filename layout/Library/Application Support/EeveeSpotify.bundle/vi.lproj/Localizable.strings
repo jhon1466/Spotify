@@ -20,7 +20,7 @@ restart_is_required_description = "Cần khởi động lại ứng dụng để
 // Patching
 
 do_not_patch_premium = "Không vá Premium";
-patching_description = "EeveeSpotify chặn các yêu cầu tải dữ liệu người dùng, giải tuần tự hóa dữ liệu đó và chỉnh sửa các tham số theo thời gian thực.
+patching_description = "GalapagameSpotify chặn các yêu cầu tải dữ liệu người dùng, giải tuần tự hóa dữ liệu đó và chỉnh sửa các tham số theo thời gian thực.
 
 Nếu bạn đang sử dụng Premium, bạn có thể bật Không vá Premium. Tinh chỉnh này sẽ không chỉnh sửa dữ liệu hoặc hạn chế việc sử dụng các tính năng Premium. Bạn cần phải khởi động lại ứng dụng sau khi thay đổi.
 
@@ -40,7 +40,7 @@ Genius: Cung cấp lời bài hát chất lượng tốt nhất, có nhiều bà
 LRCLIB: Dịch vụ cung cấp lời bài hát đồng bộ hóa theo thời gian. Nhưng thiếu lời cho nhiều bài hát.
 
 Musixmatch: Dịch vụ mà Spotify sử dụng. Cung cấp nhiều lời bài hát được đồng bộ hóa, nhưng bạn sẽ cần token để sử dụng dịch vụ này.";
-lyrics_additional_info = "Nếu EeveeSpotify không tìm thấy lời bài hát hoặc xử lý lời bài hát, bạn sẽ thấy thông báo \"Không thể tải lời cho bài hát này\". Lời bài hát có thể sai đối với một số bài hát khi sử dụng Genius do cách tinh chỉnh tìm kiếm bài hát. Tôi đã làm cho nó hoạt động trong hầu hết các trường hợp.";
+lyrics_additional_info = "Nếu GalapagameSpotify không tìm thấy lời bài hát hoặc xử lý lời bài hát, bạn sẽ thấy thông báo \"Không thể tải lời cho bài hát này\". Lời bài hát có thể sai đối với một số bài hát khi sử dụng Genius do cách tinh chỉnh tìm kiếm bài hát. Tôi đã làm cho nó hoạt động trong hầu hết các trường hợp.";
 petitlyrics_description = "PetitLyrics: Cung cấp nhiều lời bài hát tiếng Nhật được đồng bộ hóa theo thời gian và một số lời bài hát cho bài hát quốc tế.";
 
 musixmatch_user_token = "Token người dùng Musixmatch";
@@ -77,7 +77,7 @@ dark_popups = "Popups tối";
 
 /* MARK: Premium PopUps */
 
-have_premium_popup = "Có vẻ như bạn đang sử dụng Premium nên tinh chỉnh sẽ không chỉnh sửa dữ liệu hay ngăn cản bạn sử dụng tính năng Premium. Bạn có thể quản lí nó trong cài đặt của EeveeSpotify.";
+have_premium_popup = "Có vẻ như bạn đang sử dụng Premium nên tinh chỉnh sẽ không chỉnh sửa dữ liệu hay ngăn cản bạn sử dụng tính năng Premium. Bạn có thể quản lí nó trong cài đặt của GalapagameSpotify.";
 
 high_audio_quality_popup = "Chất lượng âm thanh cực cao là tính năng yêu cầu thông qua máy chủ và không khả dụng với tinh chỉnh này.";
 playlist_downloading_popup = "Tải nhạc là tính năng yêu cầu thông qua máy chủ và không khả dụng với tinh chỉnh này. Tuy nhiên, bạn có thể tải về những tập podcast.";

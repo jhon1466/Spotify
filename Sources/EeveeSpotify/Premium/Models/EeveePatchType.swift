@@ -1,6 +1,6 @@
 import Foundation
 
-enum EeveePatchType: Int {
+enum GalapagamePatchType: Int {
     case notSet
     case disabled
     case requests

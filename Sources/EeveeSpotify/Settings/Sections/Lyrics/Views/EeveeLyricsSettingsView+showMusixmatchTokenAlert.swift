@@ -1,6 +1,6 @@
 import SwiftUI
 
-extension EeveeLyricsSettingsView {
+extension GalapagameLyricsSettingsView {
     func showMusixmatchTokenAlert(_ oldSource: LyricsSource, _ showAnonymousTokenOption: Bool) {
         var message = "enter_user_token_message".localized
         

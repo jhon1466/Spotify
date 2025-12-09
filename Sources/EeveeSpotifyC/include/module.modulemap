@@ -1,4 +1,4 @@
-module EeveeSpotifyC {
+module GalapagameSpotifyC {
     umbrella "."
     export *
 }

@@ -1,5 +1,5 @@
 import Orion
-import EeveeSpotifyC
+import GalapagameSpotifyC
 import UIKit
 
 func exitApplication() {
@@ -19,13 +19,13 @@ struct LatestPremiumPatchingGroup: HookGroup { }
 func activatePremiumPatchingGroup() {
     BasePremiumPatchingGroup().activate()
     
-    if EeveeSpotify.hookTarget == .lastAvailableiOS14 {
+    if GalapagameSpotify.hookTarget == .lastAvailableiOS14 {
         IOS14PremiumPatchingGroup().activate()
     }
     else {
         NonIOS14PremiumPatchingGroup().activate()
         
-        if EeveeSpotify.hookTarget == .lastAvailableiOS15 {
+        if GalapagameSpotify.hookTarget == .lastAvailableiOS15 {
             IOS14And15PremiumPatchingGroup().activate()
         }
         else {
@@ -34,7 +34,7 @@ func activatePremiumPatchingGroup() {
     }
 }
 
-struct EeveeSpotify: Tweak {
+struct GalapagameSpotify: Tweak {
     static let version = "6.2.2"
     
     static var hookTarget: VersionHookTarget {
@@ -66,7 +66,7 @@ struct EeveeSpotify: Tweak {
         if UserDefaults.lyricsSource.isReplacingLyrics {
             BaseLyricsGroup().activate()
             
-            if EeveeSpotify.hookTarget == .latest {
+            if GalapagameSpotify.hookTarget == .latest {
                 ModernLyricsGroup().activate()
             }
             else {

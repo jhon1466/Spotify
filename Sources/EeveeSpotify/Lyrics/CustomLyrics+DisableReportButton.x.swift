@@ -5,7 +5,7 @@ class LyricsFullscreenViewControllerHook: ClassHook<UIViewController> {
     typealias Group = BaseLyricsGroup
     
     static var targetName: String {
-        switch EeveeSpotify.hookTarget {
+        switch GalapagameSpotify.hookTarget {
         case .lastAvailableiOS14: return "Lyrics_CoreImpl.FullscreenViewController"
         case .lastAvailableiOS15: return "Lyrics_FullscreenPageImpl.FullscreenViewController"
         default: return "Lyrics_FullscreenElementPageImpl.FullscreenElementViewController"
@@ -22,7 +22,7 @@ class LyricsFullscreenViewControllerHook: ClassHook<UIViewController> {
             return
         }
         
-        if EeveeSpotify.hookTarget == .latest {
+        if GalapagameSpotify.hookTarget == .latest {
             guard let fullscreenView = WindowHelper.shared.findFirstSubview(
                 "Lyrics_FullscreenElementPageImpl.FullscreenView",
                 in: target.view

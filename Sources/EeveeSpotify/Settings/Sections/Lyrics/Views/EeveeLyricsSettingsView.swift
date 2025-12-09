@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct EeveeLyricsSettingsView: View {
-    @StateObject var viewModel = EeveeLyricsSettingsViewModel()
+struct GalapagameLyricsSettingsView: View {
+    @StateObject var viewModel = GalapagameLyricsSettingsViewModel()
     
     var body: some View {
         List {

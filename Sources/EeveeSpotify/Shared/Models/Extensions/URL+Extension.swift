@@ -18,7 +18,7 @@ extension URL {
     }
 
     var isOpenSpotifySafariExtension: Bool {
-        self.host == "eevee"
+        self.host == "Galapagame"
     }
     
     var isCustomize: Bool {

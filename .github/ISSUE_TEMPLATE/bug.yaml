@@ -2,7 +2,7 @@
 # https://github.com/arichornlover/uYouEnhanced/blob/main/.github/ISSUE_TEMPLATE/bug.yaml?plain=1
 
 name: Bug
-description: Report a bug in EeveeSpotify
+description: Report a bug in GalapagameSpotify
 title: "[Bug] "
 labels: bug
 body:
@@ -10,14 +10,14 @@ body:
     attributes:
       label: Is this issue appropriate?
       description: |
-        Please read the list of [common issues](https://github.com/whoeevee/EeveeSpotifyReborn/blob/swift/common_issues.md).
+        Please read the list of [common issues](https://github.com/whoGalapagame/GalapagameSpotifyReborn/blob/swift/common_issues.md).
       options:
         - label: I have read the document in its entirety
           required: true
 
   - type: checkboxes
     attributes:
-      label: Is this issue unique to EeveeSpotify?
+      label: Is this issue unique to GalapagameSpotify?
       options:
         - label: I was unable to reproduce my issue using the stock Spotify app
           required: true

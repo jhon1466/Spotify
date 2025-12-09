@@ -1,8 +1,8 @@
 import SwiftUI
 
-struct EeveeContributorsSheetView: View {
+struct GalapagameContributorsSheetView: View {
     @State private var users: [GitHubUser] = []
-    @State private var sections: [EeveeContributorSection] = []
+    @State private var sections: [GalapagameContributorSection] = []
     
     var body: some View {
         NavigationView {
@@ -21,7 +21,7 @@ struct EeveeContributorsSheetView: View {
                                     id: \.username
                                 ) { contributor in
                                     if let user = users.first(where: { $0.login == contributor.username }) {
-                                        EeveeContributorView(contributor: contributor, githubUser: user)
+                                        GalapagameContributorView(contributor: contributor, githubUser: user)
                                     }
                                 }
                             } header: {
@@ -49,7 +49,7 @@ struct EeveeContributorsSheetView: View {
             .onAppear {
                 Task {
                     users = try await GitHubHelper.shared.getContributors()
-                    sections = try await GitHubHelper.shared.getEeveeContributorSections()
+                    sections = try await GitHubHelper.shared.getGalapagameContributorSections()
                 }
             }
         }

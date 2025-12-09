@@ -1,7 +1,7 @@
 import SwiftUI
 import UIKit
 
-struct EeveeSettingsView: View {
+struct GalapagameSettingsView: View {
     let navigationController: UINavigationController
     static let spotifyAccentColor = Color(hex: "#1ed760")
     
@@ -9,7 +9,7 @@ struct EeveeSettingsView: View {
     @State private var isClearingData = false
     
     private func pushSettingsController(with view: any View, title: String) {
-        let viewController = EeveeSettingsViewController(
+        let viewController = GalapagameSettingsViewController(
             navigationController.view.frame,
             settingsView: AnyView(view),
             navigationTitle: title
@@ -19,12 +19,12 @@ struct EeveeSettingsView: View {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        UIView.appearance().tintColor = UIColor(EeveeSettingsView.spotifyAccentColor)
+        UIView.appearance().tintColor = UIColor(GalapagameSettingsView.spotifyAccentColor)
     }
 
     var body: some View {
         List {
-            EeveeSettingsVersionView()
+            GalapagameSettingsVersionView()
             
             if !hasShownCommonIssuesTip {
                 CommonIssuesTipView(
@@ -39,7 +39,7 @@ struct EeveeSettingsView: View {
             
             Button {
                 pushSettingsController(
-                    with: EeveePatchingSettingsView(),
+                    with: GalapagamePatchingSettingsView(),
                     title: "patching".localized
                 )
             } label: {
@@ -52,7 +52,7 @@ struct EeveeSettingsView: View {
             
             Button {
                 pushSettingsController(
-                    with: EeveeLyricsSettingsView(),
+                    with: GalapagameLyricsSettingsView(),
                     title: "lyrics".localized
                 )
             } label: {
@@ -65,7 +65,7 @@ struct EeveeSettingsView: View {
             
             Button {
                 pushSettingsController(
-                    with: EeveeUISettingsView(),
+                    with: GalapagameUISettingsView(),
                     title: "customization".localized
                 )
             } label: {
@@ -78,7 +78,7 @@ struct EeveeSettingsView: View {
             
             Button {
                 pushSettingsController(
-                    with: EeveeExperimentsSettingsView(),
+                    with: GalapagameExperimentsSettingsView(),
                     title: "experiments".localized
                 )
             } label: {

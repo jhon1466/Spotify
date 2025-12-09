@@ -1,6 +1,6 @@
 import SwiftUI
 
-extension EeveeLyricsSettingsView {
+extension GalapagameLyricsSettingsView {
     private func lyricsSourceFooter() -> some View {
         var text = "lyrics_source_description".localized
 

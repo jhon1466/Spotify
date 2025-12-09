@@ -5,7 +5,7 @@ private var shouldOverrideLocalTrackURI = false
 
 class SPTPlayerTrackHook: ClassHook<NSObject> {
     typealias Group = BaseLyricsGroup
-    static let targetName = EeveeSpotify.hookTarget == .latest
+    static let targetName = GalapagameSpotify.hookTarget == .latest
         ? "SPTPlayerTrackImplementation"
         : "SPTPlayerTrack"
 

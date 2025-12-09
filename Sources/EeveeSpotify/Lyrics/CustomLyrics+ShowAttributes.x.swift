@@ -5,7 +5,7 @@ class LyricsOnlyViewControllerHook: ClassHook<UIViewController> {
     typealias Group = BaseLyricsGroup
     
     static var targetName: String {
-        switch EeveeSpotify.hookTarget {
+        switch GalapagameSpotify.hookTarget {
         case .lastAvailableiOS14: return "Lyrics_CoreImpl.LyricsOnlyViewController"
         default: return "Lyrics_NPVCommunicatorImpl.LyricsOnlyViewController"
         }
@@ -41,7 +41,7 @@ class LyricsOnlyViewControllerHook: ClassHook<UIViewController> {
         
         let typeStyle = type(
             of: Dynamic[
-                dynamicMember: EeveeSpotify.hookTarget == .lastAvailableiOS14
+                dynamicMember: GalapagameSpotify.hookTarget == .lastAvailableiOS14
                     ? "SPTEncoreTypeStyle"
                     : "SPTEncoreTextStyle"
             ].alloc(interface: SPTEncoreTypeStyle.self)
@@ -57,7 +57,7 @@ class LyricsOnlyViewControllerHook: ClassHook<UIViewController> {
             )
             
             text.append(
-                EeveeSpotify.hookTarget == .lastAvailableiOS14
+                GalapagameSpotify.hookTarget == .lastAvailableiOS14
                     ? attributedString.initWithString(
                         "\n\("fallback_attribute".localized): \(description)",
                         typeStyle: typeStyle,
@@ -77,7 +77,7 @@ class LyricsOnlyViewControllerHook: ClassHook<UIViewController> {
             )
             
             text.append(
-                EeveeSpotify.hookTarget == .lastAvailableiOS14
+                GalapagameSpotify.hookTarget == .lastAvailableiOS14
                     ? attributedString.initWithString(
                         "\n\("romanized_attribute".localized)",
                         typeStyle: typeStyle,
@@ -91,7 +91,7 @@ class LyricsOnlyViewControllerHook: ClassHook<UIViewController> {
             )
         }
         
-        if EeveeSpotify.hookTarget == .lastAvailableiOS14 {
+        if GalapagameSpotify.hookTarget == .lastAvailableiOS14 {
             encoreLabel.setNumberOfLines(text.count)
         }
 

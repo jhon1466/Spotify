@@ -3,7 +3,7 @@ import SwiftUI
 import libroot
 
 class BundleHelper {
-    private let bundleName = "EeveeSpotify"
+    private let bundleName = "GalapagameSpotify"
     
     private let bundle: Bundle
     private let enBundle: Bundle

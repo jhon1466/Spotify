@@ -1,15 +1,15 @@
-enum EeveePropertyModification {
+enum GalapagamePropertyModification {
     case remove
     case setBool(Bool)
     case setEnum(String)
 }
 
-struct EeveePropertyReplacement {
+struct GalapagamePropertyReplacement {
     let scope: String?
     let name: String?
-    let modification: EeveePropertyModification
+    let modification: GalapagamePropertyModification
     
-    init(name: String? = nil, scope: String? = nil, modification: EeveePropertyModification) {
+    init(name: String? = nil, scope: String? = nil, modification: GalapagamePropertyModification) {
         self.name = name
         self.scope = scope
         self.modification = modification

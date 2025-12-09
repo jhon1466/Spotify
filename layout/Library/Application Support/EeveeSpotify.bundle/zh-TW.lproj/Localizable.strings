@@ -21,9 +21,9 @@ restart_is_required_description = "選項變更後必須重新啟動Spotify";
 // 修補方案
 
 do_not_patch_premium = "停用Premium修補";
-patching_description = "EeveeSpotify會即時攔截使用者資料請求, 反序列化並修改資料.
+patching_description = "GalapagameSpotify會即時攔截使用者資料請求, 反序列化並修改資料.
 
-若您擁有有效的Premium方案, 則可以啟用「停用Premium修補」. 啟用後EeveeSpotify將不會限制任何Premium功能.
+若您擁有有效的Premium方案, 則可以啟用「停用Premium修補」. 啟用後GalapagameSpotify將不會限制任何Premium功能.
 
 %@";
 
@@ -41,14 +41,14 @@ Genius: 為絕大多數歌曲提供最新且高品質的歌詞, 但無法使用�
 LRCLIB: 最開放的歌詞來源, 可以使用同步歌詞. 然而歌詞庫不齊全.
 
 Musixmatch: Spotify使用的歌詞來源. 為大量歌曲提供同步歌詞以及翻譯, 但是你需要一個使用者權杖才可以使用該歌詞提供者. ";
-lyrics_additional_info = "若EeveeSpotify找不到或無法處理歌詞, 您將會看到「無法載入歌詞」. 雖然EeveeSpotify搜索歌詞的邏輯可能導致在使用Genius作為歌詞來源時顯示錯誤的歌詞, 但在大多數情況下, 它都能正常運作.";
+lyrics_additional_info = "若GalapagameSpotify找不到或無法處理歌詞, 您將會看到「無法載入歌詞」. 雖然GalapagameSpotify搜索歌詞的邏輯可能導致在使用Genius作為歌詞來源時顯示錯誤的歌詞, 但在大多數情況下, 它都能正常運作.";
 petitlyrics_description = "PetitLyrics: 提供大量日文已同步歌詞與一些非日文歌詞.";
 
 musixmatch_user_token = "Musixmatch使用者權杖";
 user_token_placeholder = "請在此輸入 Musixmatch 使用者權杖或貼上除錯資訊";
 
 enter_user_token = "輸入使用者權杖";
-enter_user_token_message = "若要使用 Musixmatch 作為歌詞提供者, 你現在可以通過 EeveeSpotify 直接取得或是從官方應用程式中找到你的使用者權杖. 從App Store下載Musixmatch, 註冊或登錄, 接著來到 設定(右上角的齒輪圖示) > Get help > 複製除錯資訊, 並在此處貼上. 亦可使用中間人攻擊提取使用者權杖.";
+enter_user_token_message = "若要使用 Musixmatch 作為歌詞提供者, 你現在可以通過 GalapagameSpotify 直接取得或是從官方應用程式中找到你的使用者權杖. 從App Store下載Musixmatch, 註冊或登錄, 接著來到 設定(右上角的齒輪圖示) > Get help > 複製除錯資訊, 並在此處貼上. 亦可使用中間人攻擊提取使用者權杖.";
 
 genius_fallback = "Genius回退";
 genius_fallback_description = "如果無法從 %@ 載入歌詞, 將使用 Genius 作為歌詞來源.";
@@ -89,10 +89,10 @@ livecontainer_sharing_description = "當選擇的目標APP不支援時, 分享�
 
 /* 標記: Premium 彈出視窗 */
 
-have_premium_popup = "您似乎沒有訂閱Premium，所以EeveeSpotify不會對使用者資料做出修補或限制Premium功能。您可以在EeveeSpotify設定中管理。";
+have_premium_popup = "您似乎沒有訂閱Premium，所以GalapagameSpotify不會對使用者資料做出修補或限制Premium功能。您可以在GalapagameSpotify設定中管理。";
 
-high_audio_quality_popup = "由於極高音質由伺服器處理因此EeveeSpotify無法啟用該功能。";
-playlist_downloading_popup = "由於原生的下載功能由伺服器處理因此EeveeSpotify無法啟用該功能。不過您仍可下載Podcast與本機檔案。";
+high_audio_quality_popup = "由於極高音質由伺服器處理因此GalapagameSpotify無法啟用該功能。";
+playlist_downloading_popup = "由於原生的下載功能由伺服器處理因此GalapagameSpotify無法啟用該功能。不過您仍可下載Podcast與本機檔案。";
 download_local_playlist = "下載本機檔案";
 
 //
@@ -104,8 +104,8 @@ could_not_share_popup = "無法分享至目標APP或者 LiveContainer. URL 已�
 fallback_attribute = "替代歌詞";
 romanized_attribute = "羅馬拼音";
 
-musixmatch_unauthorized_popup = "由於歌詞未授權因此EeveeSpotify無法從Musixmatch載入。請檢查或更新你的使用者權杖。若您正在使用iPad。則您需要從iPad版本的Musixmatch取得使用者權杖。";
-musixmatch_restricted_popup = "由於歌詞受到限制因此EeveeSpotify無法從Musixmatch載入。這可能是由於美國 IP 地址而導致的版權問題，因此如果在美國，則應更換 IP 位址或使用 VPN。";
+musixmatch_unauthorized_popup = "由於歌詞未授權因此GalapagameSpotify無法從Musixmatch載入。請檢查或更新你的使用者權杖。若您正在使用iPad。則您需要從iPad版本的Musixmatch取得使用者權杖。";
+musixmatch_restricted_popup = "由於歌詞受到限制因此GalapagameSpotify無法從Musixmatch載入。這可能是由於美國 IP 地址而導致的版權問題，因此如果在美國，則應更換 IP 位址或使用 VPN。";
 
 // 錯誤標題
 
@@ -128,7 +128,7 @@ liked_songs = "已按讚的歌曲";
 contributors = "貢獻者";
 
 request_anonymous_token = "請求匿名使用者權杖";
-request_anonymous_token_description = "點擊 「請求匿名使用者權杖」 後 EeveeSpotify 會嘗試在未授權的情況下從 Musixmatch 取得使用者權杖.";
+request_anonymous_token_description = "點擊 「請求匿名使用者權杖」 後 GalapagameSpotify 會嘗試在未授權的情況下從 Musixmatch 取得使用者權杖.";
 
 lrclib_api = "伺服器地址";
 
@@ -138,4 +138,4 @@ ad_free_music_listening = "無廣告暢聽音樂";
 play_songs_in_any_order = "由你決定歌曲播放順序";
 organize_listening_queue = "整理聆聽佇列";
 
-payment_notice = "EeveeSpotify 通過應用修補以啟用 Premium 功能且完全免費.";
+payment_notice = "GalapagameSpotify 通過應用修補以啟用 Premium 功能且完全免費.";

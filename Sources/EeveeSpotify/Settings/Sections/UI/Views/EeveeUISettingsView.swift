@@ -1,7 +1,7 @@
 import SwiftUI
 import UIKit
 
-struct EeveeUISettingsView: View {
+struct GalapagameUISettingsView: View {
     @State var lyricsColors = UserDefaults.lyricsColors
 
     var body: some View {

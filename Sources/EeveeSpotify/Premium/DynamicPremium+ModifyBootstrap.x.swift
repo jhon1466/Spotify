@@ -10,7 +10,7 @@ private func showHavePremiumPopUp() {
 
 class SpotifySessionDelegateBootstrapHook: ClassHook<NSObject>, SpotifySessionDelegate {
     static var targetName: String {
-        switch EeveeSpotify.hookTarget {
+        switch GalapagameSpotify.hookTarget {
         case .lastAvailableiOS14: return "SPTCoreURLSessionDataDelegate"
         default: return "SPTDataLoaderService"
         }
@@ -73,7 +73,7 @@ class SpotifySessionDelegateBootstrapHook: ClassHook<NSObject>, SpotifySessionDe
                         activatePremiumPatchingGroup()
                     }
                     
-                    NSLog("[EeveeSpotify] Fetched bootstrap, \(UserDefaults.patchType) was set")
+                    NSLog("[GalapagameSpotify] Fetched bootstrap, \(UserDefaults.patchType) was set")
                 }
                 
                 if UserDefaults.patchType == .requests {
@@ -85,7 +85,7 @@ class SpotifySessionDelegateBootstrapHook: ClassHook<NSObject>, SpotifySessionDe
                         didReceiveData: try bootstrapMessage.serializedBytes()
                     )
                     
-                    NSLog("[EeveeSpotify] Modified bootstrap data")
+                    NSLog("[GalapagameSpotify] Modified bootstrap data")
                 }
                 else {
                     orig.URLSession(session, dataTask: task, didReceiveData: buffer)
@@ -95,7 +95,7 @@ class SpotifySessionDelegateBootstrapHook: ClassHook<NSObject>, SpotifySessionDe
                 return
             }
             catch {
-                NSLog("[EeveeSpotify] Unable to modify bootstrap data: \(error)")
+                NSLog("[GalapagameSpotify] Unable to modify bootstrap data: \(error)")
             }
         }
         

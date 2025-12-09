@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct EeveeSettingsVersionView: View {
+struct GalapagameSettingsVersionView: View {
     @State private var latestVersion: String?
     @State private var isPresentingContributorsSheet = false
     
@@ -10,7 +10,7 @@ struct EeveeSettingsVersionView: View {
     }
     
     private var isUpdateAvailable: Bool {
-        latestVersion != nil && latestVersion != EeveeSpotify.version
+        latestVersion != nil && latestVersion != GalapagameSpotify.version
     }
     
     var body: some View {
@@ -18,12 +18,12 @@ struct EeveeSettingsVersionView: View {
             if isUpdateAvailable {
                 Link(
                     "update_available".localized,
-                    destination: URL(string: "https://github.com/whoeevee/EeveeSpotifyReborn/releases")!
+                    destination: URL(string: "https://github.com/whoGalapagame/GalapagameSpotifyReborn/releases")!
                 )
             }
         } footer: {
             VStack(alignment: .leading) {
-                Text("v\(EeveeSpotify.version)")
+                Text("v\(GalapagameSpotify.version)")
                 
                 if latestVersion == nil {
                     HStack(spacing: 10) {
@@ -41,7 +41,7 @@ struct EeveeSettingsVersionView: View {
             }
         }
         .sheet(isPresented: $isPresentingContributorsSheet) {
-            EeveeContributorsSheetView()
+            GalapagameContributorsSheetView()
         }
         
         .animation(.default, value: latestVersion)

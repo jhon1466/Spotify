@@ -5,7 +5,7 @@ class ErrorViewControllerHook: ClassHook<UIViewController> {
     typealias Group = BaseLyricsGroup
     
     static var targetName: String {
-        switch EeveeSpotify.hookTarget {
+        switch GalapagameSpotify.hookTarget {
         case .lastAvailableiOS14: return "Lyrics_CoreImpl.ErrorViewController"
         default: return "Lyrics_NPVCommunicatorImpl.ErrorViewController"
         }

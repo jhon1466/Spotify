@@ -1,7 +1,7 @@
 import SwiftUI
 import UIKit
 
-struct EeveePatchingSettingsView: View {
+struct GalapagamePatchingSettingsView: View {
     @State var patchType = UserDefaults.patchType
     @State var overwriteConfiguration = UserDefaults.overwriteConfiguration
 

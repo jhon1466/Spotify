@@ -1,7 +1,7 @@
 import SwiftUI
 import Combine
 
-class EeveeLyricsSettingsViewModel: ObservableObject {
+class GalapagameLyricsSettingsViewModel: ObservableObject {
     @Published var lyricsSource = UserDefaults.lyricsSource
     
     @Published var lyricsOptions = UserDefaults.lyricsOptions {

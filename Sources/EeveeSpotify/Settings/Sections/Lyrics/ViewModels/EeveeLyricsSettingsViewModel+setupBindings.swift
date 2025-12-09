@@ -1,7 +1,7 @@
 import SwiftUI
 import Combine
 
-extension EeveeLyricsSettingsViewModel {
+extension GalapagameLyricsSettingsViewModel {
     func setupBindings() {
         $lyricsOptions
             .map(\.musixmatchLanguage)

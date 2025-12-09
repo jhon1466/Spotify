@@ -1,5 +1,5 @@
-struct EeveeContributorSection: Decodable, Equatable {
+struct GalapagameContributorSection: Decodable, Equatable {
     var title: String
     var shuffled: Bool
-    var contributors: [EeveeContributor]
+    var contributors: [GalapagameContributor]
 }
