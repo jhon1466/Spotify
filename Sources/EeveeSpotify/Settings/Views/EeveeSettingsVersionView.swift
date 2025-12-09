@@ -18,7 +18,7 @@ struct GalapagameSettingsVersionView: View {
             if isUpdateAvailable {
                 Link(
                     "update_available".localized,
-                    destination: URL(string: "https://github.com/whoGalapagame/GalapagameSpotifyReborn/releases")!
+                    destination: URL(string: "https://github.com/whoeevee/GalapagameSpotifyReborn/releases")!
                 )
             }
         } footer: {

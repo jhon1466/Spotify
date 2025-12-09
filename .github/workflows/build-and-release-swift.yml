@@ -93,8 +93,8 @@ jobs:
 
     - name: Download SwiftProtobuf
       run: |
-        wget https://github.com/whoGalapagame/swift-protobuf/releases/download/${{ env.SWIFTPROTOBUF_VERSION }}/org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm.deb
-        wget https://github.com/whoGalapagame/swift-protobuf/releases/download/${{ env.SWIFTPROTOBUF_VERSION }}/org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm64.deb
+        wget https://github.com/whoeevee/swift-protobuf/releases/download/${{ env.SWIFTPROTOBUF_VERSION }}/org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm.deb
+        wget https://github.com/whoeevee/swift-protobuf/releases/download/${{ env.SWIFTPROTOBUF_VERSION }}/org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm64.deb
 
         echo "SWIFTPROTOBUF_ROOTFUL=org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm.deb" >> $GITHUB_ENV
         echo "SWIFTPROTOBUF_ROOTLESS=org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm64.deb" >> $GITHUB_ENV
@@ -121,9 +121,9 @@ jobs:
 
     - name: Setup ivinject
       run: |
-        git clone https://github.com/whoGalapagame/ivinject.git
+        git clone https://github.com/whoeevee/ivinject.git
         cp -r ./ivinject/KnownFrameworks ~/.ivinject
-        wget https://github.com/whoGalapagame/ivinject/releases/download/first/ivinject-arm64
+        wget https://github.com/whoeevee/ivinject/releases/download/first/ivinject-arm64
         sudo mv ivinject-arm64 /usr/local/bin/
         sudo chmod +x /usr/local/bin/ivinject-arm64
 

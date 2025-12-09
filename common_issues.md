@@ -12,23 +12,23 @@ GalapagameSpotify versions are released automatically alongside Spotify versions
 
 ## CarPlay, Siri and Dynamic Island/Lockscreen
 
-To use CarPlay, you need to either install the tweak on a jailbroken device, use TrollStore, or have a paid certificate with a CarPlay entitlement. Some additional setup steps may be required, which are described in the [related issues](https://github.com/whoGalapagame/GalapagameSpotify/issues?q=CarPlay%20sort%3Acomments-desc).
+To use CarPlay, you need to either install the tweak on a jailbroken device, use TrollStore, or have a paid certificate with a CarPlay entitlement. Some additional setup steps may be required, which are described in the [related issues](https://github.com/whoeevee/GalapagameSpotify/issues?q=CarPlay%20sort%3Acomments-desc).
 
 To use Siri, you need to either install the tweak on a jailbroken device, use TrollStore, or have a paid certificate with a Siri entitlement.
 
-If you’re using a paid certificate, to navigate to a song from the lock screen, control center, or Dynamic Island, and to use Spatial Audio or Siri, change the app and bundle identifiers to match your provisioning profile (https://github.com/whoGalapagame/GalapagameSpotify/issues/32).
+If you’re using a paid certificate, to navigate to a song from the lock screen, control center, or Dynamic Island, and to use Spatial Audio or Siri, change the app and bundle identifiers to match your provisioning profile (https://github.com/whoeevee/GalapagameSpotify/issues/32).
 
 # Feature Requests
 
 GalapagameSpotify does not accept free feature requests. If you need something, feel free to implement it yourself, or submit a pull request if you think others may find it useful. If you’re willing to pay for a feature, open an issue to discuss further opportunities.
 
-Read the [Restrictions](https://github.com/whoGalapagame/GalapagameSpotify?tab=readme-ov-file#restrictions) to learn which Premium features are server-sided and will never work without a Premium subscription.
+Read the [Restrictions](https://github.com/whoeevee/GalapagameSpotify?tab=readme-ov-file#restrictions) to learn which Premium features are server-sided and will never work without a Premium subscription.
 
 # Troubleshooting & Issues
 
 ## Something Went Wrong
 
-If you're unable to sign in, see [the reason and workarounds](https://github.com/whoGalapagame/GalapagameSpotify/blob/swift/something-went-wrong.md).
+If you're unable to sign in, see [the reason and workarounds](https://github.com/whoeevee/GalapagameSpotify/blob/swift/something-went-wrong.md).
 
 ## Lyrics Not Showing Up
 
@@ -58,7 +58,7 @@ It is known that when using Spotify Connect, you may encounter ads, be unable to
 
 ## Ads on Homescreen
 
-You may see ads on the home screen. This is a known issue and will not be fixed, as it is a real challenge. To learn more, read the contents of issue https://github.com/whoGalapagame/GalapagameSpotify/issues/422.
+You may see ads on the home screen. This is a known issue and will not be fixed, as it is a real challenge. To learn more, read the contents of issue https://github.com/whoeevee/GalapagameSpotify/issues/422.
 
 ## Ads in Podcasts
 

@@ -29,6 +29,6 @@ class GalapagameSettingsViewController: SPTPageViewController {
     }
     
     @objc func openRepositoryUrl(_ sender: UIButton) {
-        UIApplication.shared.open(URL(string: "https://github.com/whoGalapagame/GalapagameSpotifyReborn")!)
+        UIApplication.shared.open(URL(string: "https://github.com/whoeevee/GalapagameSpotifyReborn")!)
     }
 }

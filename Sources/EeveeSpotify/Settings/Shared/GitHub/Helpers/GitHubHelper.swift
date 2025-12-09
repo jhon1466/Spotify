@@ -18,7 +18,7 @@ struct GitHubHelper {
     }
     
     func getLatestRelease() async throws -> GitHubRelease {
-        let data = try await perform("/repos/whoGalapagame/GalapagameSpotifyReborn/releases/latest")
+        let data = try await perform("/repos/whoeevee/GalapagameSpotifyReborn/releases/latest")
         return try decoder.decode(GitHubRelease.self, from: data)
     }
     
@@ -28,14 +28,14 @@ struct GitHubHelper {
     }
     
     func getContributors() async throws -> [GitHubUser] {
-        let data = try await perform("/repos/whoGalapagame/GalapagameSpotifyReborn/contributors")
+        let data = try await perform("/repos/whoeevee/GalapagameSpotifyReborn/contributors")
         return try decoder.decode([GitHubUser].self, from: data)
     }
     
     func getGalapagameContributorSections() async throws -> [GalapagameContributorSection] {
         let (data, _) = try await URLSession.shared.data(
             from: URL(
-                string: "https://raw.githubusercontent.com/whoGalapagame/GalapagameSpotifyReborn/swift/contributors.json"
+                string: "https://raw.githubusercontent.com/whoeevee/GalapagameSpotifyReborn/swift/contributors.json"
             )!
         )
         return try decoder.decode([GalapagameContributorSection].self, from: data)
